@@ -29,7 +29,7 @@ motan-basicRefer:
     requestTimeout: 1000
     haStrategy: failover
     loadbalance: roundrobin
-    serialization: protobuf
+    serialization: gob
     filter: "accessLog" # filter registed in extFactory
     retries: 0
     nodeType: referer

@@ -56,14 +56,14 @@ func (s *ProtoBufSerialization) DeSerialize(b []byte, v interface{}) (interface{
 
 func (s *ProtoBufSerialization) SerializeMulti(v []interface{}) ([]byte, error) {
 	if len(v) != 1 {
-		return nil, fmt.Errorf("Not support SerializeMulti")
+		return nil, fmt.Errorf("Not support Serialize multi yet")
 	}
 	return s.Serialize(v[0])
 }
 
 func (s *ProtoBufSerialization) DeSerializeMulti(b []byte, v []interface{}) (ret []interface{}, err error) {
 	if len(v) != 1 {
-		return nil, fmt.Errorf("Not support DeSerializeMulti")
+		return nil, fmt.Errorf("Not support DeSerialize multi yet")
 	}
 	if res, err := s.DeSerialize(b, v[0]); err == nil {
 		return []interface{}{res}, nil

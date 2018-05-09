@@ -1,9 +1,8 @@
-package serialize_test
+package serialize
 
 import (
 	"testing"
 	"github.com/weibocom/motan-go/gengo/protodef"
-	"github.com/weibocom/motan-go/serialize"
 )
 
 // serialize && deserialize string
@@ -17,7 +16,7 @@ func TestSerializeAddress(t *testing.T) {
 
 	address.People = append(address.People, person)
 
-	serialization := &serialize.ProtoBufSerialization{}
+	serialization := &ProtoBufSerialization{}
 
 	bytes, err := serialization.Serialize(&address)
 
