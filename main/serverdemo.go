@@ -4,9 +4,8 @@ import (
 	"bytes"
 	"fmt"
 	"time"
-
+	"github.com/weibocom/motan-go/main/demo"
 	motan "github.com/weibocom/motan-go"
-	"github.com/weibocom/motan-go/gengo/protodef"
 )
 
 func main() {
@@ -24,13 +23,13 @@ func runServerDemo() {
 
 type MotanDemoService struct{}
 
-func (m *MotanDemoService) Hello(book *tutorial.AddressBook) *tutorial.AddressBook {
-	fmt.Printf("book.People.length :%s\n", len(book.People))
+func (m *MotanDemoService) Hello(book *demo.AddressBook) *demo.AddressBook {
+	fmt.Printf("book.People.length :%d\n", len(book.People))
 	fmt.Printf("book.People[0].Email :%s\n", book.People[0].Email)
 	fmt.Printf("book.People[0].name :%s\n", book.People[0].Name)
-	book.People[0].Name = book.People[0].Name + ">>>"
-	book.People[0].Email = book.People[0].Email + ">>>"
-	book.People[0].Phones[0].Number = book.People[0].Phones[0].Number + ">>>"
+	book.People[0].Name = book.People[0].Name + " >>>"
+	book.People[0].Email = book.People[0].Email + " >>>"
+	book.People[0].Phones[0].Number = book.People[0].Phones[0].Number + " >>>"
 	return book
 }
 

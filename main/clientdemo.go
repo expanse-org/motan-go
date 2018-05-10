@@ -2,9 +2,8 @@ package main
 
 import (
 	"fmt"
-
+	"github.com/weibocom/motan-go/main/demo"
 	motan "github.com/weibocom/motan-go"
-	"github.com/weibocom/motan-go/gengo/protodef"
 )
 
 func main() {
@@ -39,27 +38,27 @@ func runClientDemo() {
 
 	mclient2 := mccontext.GetClient("mytest-demo")
 
-	person := &tutorial.Person{}
+	person := &demo.Person{}
 	person.Id = 100
 	person.Email = "email@sss.com"
 	person.Name = "NameDemo"
-	phoneNumber := new (tutorial.Person_PhoneNumber)
+	phoneNumber := new (demo.Person_PhoneNumber)
 	phoneNumber.Number = "12232323"
 	person.Phones = append(person.Phones, phoneNumber)
-	address := &tutorial.AddressBook{}
+	address := &demo.AddressBook{}
 	address.People = append(address.People, person)
 
-	addressRes := &tutorial.AddressBook{}
+	addressRes := &demo.AddressBook{}
 
 	err := mclient2.Call("hello", []interface{}{address}, addressRes)
 	if err != nil {
 		fmt.Printf("motan call fail! err:%v\n", err)
 	} else {
-		fmt.Printf("addressRes.People.length :%s\n", len(addressRes.People))
-		fmt.Printf("addressRes.People[0].Email :%s\n", len(addressRes.People[0].Email))
-		fmt.Printf("addressRes.People[0].name :%s\n", len(addressRes.People[0].Name))
-		fmt.Printf("addressRes.People[0].Phones[0].Number :%s\n", len(addressRes.People[0].Phones[0].Number))
-		fmt.Printf("motan call success! reply:%s\n", addressRes.String())
+		fmt.Printf("motan call success!\n")
+		fmt.Printf("addressRes.People.length :%d\n", len(addressRes.People))
+		fmt.Printf("addressRes.People[0].Email :%s\n", addressRes.People[0].Email)
+		fmt.Printf("addressRes.People[0].name :%s\n", addressRes.People[0].Name)
+		fmt.Printf("addressRes.People[0].Phones[0].Number :%s\n", addressRes.People[0].Phones[0].Number)
 	}
 
 }
