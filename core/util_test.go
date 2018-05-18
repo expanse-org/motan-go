@@ -21,7 +21,7 @@ func TestGetLocalIP(t *testing.T) {
 		t.Errorf("get local ip fail. ip:%s", ip)
 	}
 	hostname := "testhostname"
-	*LocalIP = hostname
+	LocalIP = hostname
 	ip = GetLocalIP()
 	if ip != hostname {
 		t.Errorf("get local ip fail. ip:%s", ip)

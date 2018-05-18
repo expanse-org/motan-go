@@ -8,7 +8,6 @@ import (
 )
 
 func TestInfo(t *testing.T) {
-	flag.Parse()
 	LogInit(nil)
 	// 处理日志缓存
 	defer Flush()
@@ -23,7 +22,7 @@ func TestInfo(t *testing.T) {
 	//flag.Set("log_backtrace_at", "vlog_test.go:17")
 
 	// 设置日志目录
-	flag.Set("log_dir", ".")
+	flag.Set("motan_log_dir", ".")
 	// flag.Set("log_dir", "/Users/Arthur/Station/Go/src/motan-go/log")
 
 	go func() {

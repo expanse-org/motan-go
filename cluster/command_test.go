@@ -26,12 +26,12 @@ func TestProcessRouter(t *testing.T) {
 	router := newRouter(" 10.73.1.* to 10.75.1.* ")
 
 	//not match
-	*motan.LocalIP = "10.75.0.8"
+	motan.LocalIP = "10.75.0.8"
 	result := proceeRoute(urls, router)
 	checksize(len(result), len(urls), t)
 
 	// prefix match
-	*motan.LocalIP = "10.73.1.8"
+	motan.LocalIP = "10.73.1.8"
 	result = proceeRoute(urls, router)
 	checksize(len(result), 2, t)
 	checkHost(result, func(host string) bool {
@@ -40,7 +40,7 @@ func TestProcessRouter(t *testing.T) {
 
 	// exact match
 	router = newRouter("10.75.0.8 to 10.73.1.*")
-	*motan.LocalIP = "10.75.0.8"
+	motan.LocalIP = "10.75.0.8"
 	result = proceeRoute(urls, router)
 	checksize(len(result), 2, t)
 	checkHost(result, func(host string) bool {
@@ -49,7 +49,7 @@ func TestProcessRouter(t *testing.T) {
 
 	// * match
 	router = newRouter(" * to 10.75.*")
-	*motan.LocalIP = "10.108.0.8"
+	motan.LocalIP = "10.108.0.8"
 	result = proceeRoute(urls, router)
 	checksize(len(result), 4, t)
 	checkHost(result, func(host string) bool {
@@ -58,7 +58,7 @@ func TestProcessRouter(t *testing.T) {
 
 	// multi rules
 	router = newRouter(" * to 10.75.*", "10.108.* to 10.77.1.* ")
-	*motan.LocalIP = "10.108.0.8"
+	motan.LocalIP = "10.108.0.8"
 	result = proceeRoute(urls, router)
 	checksize(len(result), 0, t)
 
@@ -77,14 +77,14 @@ func TestProcessRouter(t *testing.T) {
 	}, t)
 
 	router = newRouter(" 10.79.* to !10.75.1.*", "10.108.* to 10.73.1.* ", "10.108.* to !10.73.1.5")
-	*motan.LocalIP = "10.79.0.8"
+	motan.LocalIP = "10.79.0.8"
 	result = proceeRoute(urls, router)
 	checksize(len(result), 6, t)
 	checkHost(result, func(host string) bool {
 		return strings.HasPrefix(host, "10.75.1")
 	}, t)
 
-	*motan.LocalIP = "10.108.0.8"
+	motan.LocalIP = "10.108.0.8"
 	result = proceeRoute(urls, router)
 	checksize(len(result), 1, t)
 	checkHost(result, func(host string) bool {
@@ -97,7 +97,7 @@ func TestGetResultWithCommand(t *testing.T) {
 	cmds := make([]string, 0, 10)
 	cmds = append(cmds, buildCmd(1, CMDTrafficControl, "*", "\"group0:3\",\"group1:5\"", "\" 10.79.* to !10.75.1.*\", \"10.108.* to 10.73.1.* \""))
 	cmds = append(cmds, buildCmd(1, CMDDegrade, "com.weibo.test.TestService", "", ""))
-	*motan.LocalIP = "10.108.0.8"
+	motan.LocalIP = "10.108.0.8"
 	cl := buildCmdList(cmds)
 	listener := &MockListener{}
 	crw.notifyListener = listener
