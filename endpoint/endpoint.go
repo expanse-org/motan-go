@@ -1,8 +1,8 @@
 package endpoint
 
 import (
-	motan "github.com/weibocom/motan-go/core"
-	mpro "github.com/weibocom/motan-go/protocol"
+	motan "github.com/Loopring/motan-go/core"
+	mpro "github.com/Loopring/motan-go/protocol"
 	"sync/atomic"
 	"time"
 )

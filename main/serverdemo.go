@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"fmt"
 	"time"
-	"github.com/weibocom/motan-go/main/demo"
-	motan "github.com/weibocom/motan-go"
+	"github.com/Loopring/motan-go/main/demo"
+	motan "github.com/Loopring/motan-go"
 )
 
 func main() {

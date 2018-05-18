@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/weibocom/motan-go/log"
+	"github.com/Loopring/motan-go/log"
 )
 
 type URL struct {

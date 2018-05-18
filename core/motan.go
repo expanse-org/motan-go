@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"errors"
-	"github.com/weibocom/motan-go/log"
+	"github.com/Loopring/motan-go/log"
 )
 
 //-----------interface-------------

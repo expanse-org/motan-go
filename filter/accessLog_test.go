@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	motan "github.com/weibocom/motan-go/core"
-	endpoint "github.com/weibocom/motan-go/endpoint"
+	motan "github.com/Loopring/motan-go/core"
+	endpoint "github.com/Loopring/motan-go/endpoint"
 )
 
 func TestFilter(t *testing.T) {

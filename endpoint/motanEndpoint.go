@@ -10,9 +10,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	motan "github.com/weibocom/motan-go/core"
-	"github.com/weibocom/motan-go/log"
-	mpro "github.com/weibocom/motan-go/protocol"
+	motan "github.com/Loopring/motan-go/core"
+	"github.com/Loopring/motan-go/log"
+	mpro "github.com/Loopring/motan-go/protocol"
 )
 
 var (

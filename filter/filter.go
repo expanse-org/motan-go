@@ -1,6 +1,6 @@
 package filter
 
-import motan "github.com/weibocom/motan-go/core"
+import motan "github.com/Loopring/motan-go/core"
 
 // ext name
 const (

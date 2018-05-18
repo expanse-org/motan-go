@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	motan "github.com/weibocom/motan-go"
-	motancore "github.com/weibocom/motan-go/core"
+	motan "github.com/Loopring/motan-go"
+	motancore "github.com/Loopring/motan-go/core"
 )
 
 func main() {

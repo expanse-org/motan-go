@@ -10,12 +10,12 @@ import (
 	"strconv"
 	"time"
 
-	cluster "github.com/weibocom/motan-go/cluster"
-	motan "github.com/weibocom/motan-go/core"
-	"github.com/weibocom/motan-go/log"
-	mpro "github.com/weibocom/motan-go/protocol"
-	registry "github.com/weibocom/motan-go/registry"
-	mserver "github.com/weibocom/motan-go/server"
+	cluster "github.com/Loopring/motan-go/cluster"
+	motan "github.com/Loopring/motan-go/core"
+	"github.com/Loopring/motan-go/log"
+	mpro "github.com/Loopring/motan-go/protocol"
+	registry "github.com/Loopring/motan-go/registry"
+	mserver "github.com/Loopring/motan-go/server"
 )
 
 const (
@@ -361,7 +361,7 @@ func getClusterKey(group, version, protocol, path string) string {
 
 func initLog(logdir string) {
 	fmt.Printf("use log dir:%s\n", logdir)
-	flag.Set("log_dir", logdir)
+	flag.Set("motan_log_dir", logdir)
 	vlog.FlushInterval = 1 * time.Second
 	vlog.LogInit(nil)
 }

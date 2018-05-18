@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 
 	"github.com/mitchellh/mapstructure"
-	"github.com/weibocom/motan-go/log"
+	"github.com/Loopring/motan-go/log"
 	"gopkg.in/yaml.v2"
 	"regexp"
 )

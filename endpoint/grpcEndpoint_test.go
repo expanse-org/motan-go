@@ -3,7 +3,7 @@ package endpoint
 import (
 	"testing"
 
-	motan "github.com/weibocom/motan-go/core"
+	motan "github.com/Loopring/motan-go/core"
 )
 
 func TestGetURL(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	motan "github.com/weibocom/motan-go/core"
+	motan "github.com/Loopring/motan-go/core"
 	"math/rand"
 )
 

@@ -9,9 +9,9 @@ import (
 	"strings"
 	"sync"
 
-	motan "github.com/weibocom/motan-go/core"
-	"github.com/weibocom/motan-go/log"
-	mserver "github.com/weibocom/motan-go/server"
+	motan "github.com/Loopring/motan-go/core"
+	"github.com/Loopring/motan-go/log"
+	mserver "github.com/Loopring/motan-go/server"
 	"runtime/debug"
 )
 

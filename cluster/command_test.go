@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	motan "github.com/weibocom/motan-go/core"
+	motan "github.com/Loopring/motan-go/core"
 )
 
 func TestCommandParse(t *testing.T) {

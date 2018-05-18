@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"testing"
 
-	motan "github.com/weibocom/motan-go/core"
+	motan "github.com/Loopring/motan-go/core"
 
-	ha "github.com/weibocom/motan-go/ha"
-	lb "github.com/weibocom/motan-go/lb"
+	ha "github.com/Loopring/motan-go/ha"
+	lb "github.com/Loopring/motan-go/lb"
 )
 
 var (

@@ -10,8 +10,8 @@ import (
 	"io"
 	"io/ioutil"
 
-	motan "github.com/weibocom/motan-go/core"
-	"github.com/weibocom/motan-go/log"
+	motan "github.com/Loopring/motan-go/core"
+	"github.com/Loopring/motan-go/log"
 )
 
 //message type

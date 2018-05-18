@@ -8,7 +8,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/weibocom/motan-go/log"
+	"github.com/Loopring/motan-go/log"
 )
 
 var localIPs = make([]string, 0)

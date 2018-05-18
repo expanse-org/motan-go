@@ -3,7 +3,7 @@ package ha
 import (
 	"testing"
 
-	motan "github.com/weibocom/motan-go/core"
+	motan "github.com/Loopring/motan-go/core"
 )
 
 func NewFailOver(url *motan.URL) motan.HaStrategy {

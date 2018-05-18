@@ -4,8 +4,8 @@ import (
 	"strconv"
 	"time"
 
-	motan "github.com/weibocom/motan-go/core"
-	"github.com/weibocom/motan-go/log"
+	motan "github.com/Loopring/motan-go/core"
+	"github.com/Loopring/motan-go/log"
 	"golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
 	metadata "google.golang.org/grpc/metadata"

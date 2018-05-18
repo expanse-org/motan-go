@@ -4,8 +4,8 @@ import (
 	"strconv"
 	"testing"
 
-	motan "github.com/weibocom/motan-go/core"
-	"github.com/weibocom/motan-go/endpoint"
+	motan "github.com/Loopring/motan-go/core"
+	"github.com/Loopring/motan-go/endpoint"
 )
 
 func TestWeightedLbWraper(t *testing.T) {

@@ -3,15 +3,15 @@ package motan
 import (
 	"sync"
 
-	motan "github.com/weibocom/motan-go/core"
-	endpoint "github.com/weibocom/motan-go/endpoint"
-	filter "github.com/weibocom/motan-go/filter"
-	ha "github.com/weibocom/motan-go/ha"
-	lb "github.com/weibocom/motan-go/lb"
-	provider "github.com/weibocom/motan-go/provider"
-	registry "github.com/weibocom/motan-go/registry"
-	serialize "github.com/weibocom/motan-go/serialize"
-	server "github.com/weibocom/motan-go/server"
+	motan "github.com/Loopring/motan-go/core"
+	endpoint "github.com/Loopring/motan-go/endpoint"
+	filter "github.com/Loopring/motan-go/filter"
+	ha "github.com/Loopring/motan-go/ha"
+	lb "github.com/Loopring/motan-go/lb"
+	provider "github.com/Loopring/motan-go/provider"
+	registry "github.com/Loopring/motan-go/registry"
+	serialize "github.com/Loopring/motan-go/serialize"
+	server "github.com/Loopring/motan-go/server"
 )
 
 var (

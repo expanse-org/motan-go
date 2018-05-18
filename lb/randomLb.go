@@ -1,7 +1,7 @@
 package lb
 
 import (
-	motan "github.com/weibocom/motan-go/core"
+	motan "github.com/Loopring/motan-go/core"
 )
 
 type RandomLB struct {

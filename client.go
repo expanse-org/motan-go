@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"sync"
 
-	cluster "github.com/weibocom/motan-go/cluster"
-	motan "github.com/weibocom/motan-go/core"
-	mpro "github.com/weibocom/motan-go/protocol"
+	cluster "github.com/Loopring/motan-go/cluster"
+	motan "github.com/Loopring/motan-go/core"
+	mpro "github.com/Loopring/motan-go/protocol"
 )
 
 var (

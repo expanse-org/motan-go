@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/rcrowley/go-metrics"
-	"github.com/weibocom/motan-go/log"
+	"github.com/Loopring/motan-go/log"
 )
 
 const (
