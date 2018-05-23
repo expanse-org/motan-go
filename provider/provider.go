@@ -6,7 +6,7 @@ import (
 
 	motan "github.com/Loopring/motan-go/core"
 	"github.com/Loopring/motan-go/log"
-	"github.com/Loopring/relay-lib/watchcloud"
+	"github.com/Loopring/relay-lib/cloudwatch"
 	"time"
 )
 
@@ -120,8 +120,8 @@ func (d *DefaultProvider) Call(request motan.Request) (res motan.Response) {
 	}
 	startTime := time.Now().UnixNano()
 	ret := m.Call(vs)
-	if watchcloud.IsValid() {
-		watchcloud.PutResponseTimeMetric(methodName, float64((time.Now().UnixNano() - startTime) / 1000))
+	if cloudwatch.IsValid() {
+		cloudwatch.PutResponseTimeMetric(methodName, float64((time.Now().UnixNano() - startTime) / 1000))
 	}
 	mres := &motan.MotanResponse{RequestID: request.GetRequestID()}
 	if len(ret) > 0 { // only use first return value.
