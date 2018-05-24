@@ -48,7 +48,7 @@ func (z *ZkRegistry) Initialize() {
 	z.timeout = time.Duration(z.url.GetPositiveIntValue(motan.TimeOutKey, DefaultTimeout)) * time.Millisecond
 	var addrs []string
 	if z.url.Host != "" {
-		addrs = []string{z.url.GetAddressStr()}
+		addrs = z.url.CompositeAddresses()
 	} else {
 		addrs = strings.Split(z.url.GetParam(motan.AddressKey, ""), ",")
 	}
