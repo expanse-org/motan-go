@@ -121,7 +121,7 @@ func (d *DefaultProvider) Call(request motan.Request) (res motan.Response) {
 	startTime := time.Now().UnixNano()
 	ret := m.Call(vs)
 	if cloudwatch.IsValid() {
-		cloudwatch.PutResponseTimeMetric(methodName, float64((time.Now().UnixNano() - startTime) / 1000))
+		cloudwatch.PutResponseTimeMetric(methodName, float64((time.Now().UnixNano() - startTime) / int64(time.Millisecond)))
 	}
 	mres := &motan.MotanResponse{RequestID: request.GetRequestID()}
 	if len(ret) > 0 { // only use first return value.
