@@ -3,7 +3,7 @@ package registry
 import (
 	"testing"
 
-	motan "github.com/Loopring/motan-go/core"
+	motan "github.com/expanse-org/motan-go/core"
 )
 
 func TestGetRegistry(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	motan "github.com/Loopring/motan-go/core"
+	motan "github.com/expanse-org/motan-go/core"
 )
 
 func TestGetDirectRegistey(t *testing.T) {

@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/Loopring/motan-go/main/demo"
-	motan "github.com/Loopring/motan-go"
+	"github.com/expanse-org/motan-go/main/demo"
+	motan "github.com/expanse-org/motan-go"
 )
 
 func main() {

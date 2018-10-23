@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	motan "github.com/Loopring/motan-go/core"
-	"github.com/Loopring/motan-go/log"
-	serialize "github.com/Loopring/motan-go/serialize"
+	motan "github.com/expanse-org/motan-go/core"
+	"github.com/expanse-org/motan-go/log"
+	serialize "github.com/expanse-org/motan-go/serialize"
 )
 
 //TODO more UT
